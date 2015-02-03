@@ -1,4 +1,3 @@
-Thanks to @komljen for the base setup :D
 
 Test environment with Vagrant
 ==============
