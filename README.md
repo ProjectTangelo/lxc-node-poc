@@ -1,7 +1,4 @@
-Deploy Sensu monitoring tool with SaltStack
-=========
-
-Salt states for Sensu server (with Uchiwa dashboard) and clients deployment.
+Thanks to @komljen for the base setup :D
 
 Test environment with Vagrant
 ==============
