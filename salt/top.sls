@@ -7,3 +7,4 @@ base:
   'node*':
     - salt.vagrant
     - salt.vagrant_lxc
+    - salt.shellinabox
