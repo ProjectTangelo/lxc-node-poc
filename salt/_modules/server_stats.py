@@ -30,10 +30,29 @@ __ALIAS_RE = re.compile(r'([^:#]*)\s*:?\s*([^#]*?)(\s+#.*|$)')
 # all of the above
 #os.popend("_____".read() :(string)
 
-def get_mem_free():
+def get_mem():
 	text = os.popen('free -m').read().strip().split("\n")[1].split(" ")
 	text = filter(lambda x : len(x) > 0, text)[1:]
-	return text[1]
+	return text
+def get_mem_free():
+#	text = os.popen('free -m').read().strip().split("\n")[1].split(" ")
+#	text = filter(lambda x : len(x) > 0, text)[1:])
+	return get_mem()[1]	
+def get_mem_total():
+	return get_mem()[0]
+
+def get_disk():
+        text = os.popen('df -m').read().strip().split("\n")[1].split(" ")
+        text = filter(lambda x : len(x) > 0, text)[1:]
+        return text
+def get_disk_total():
+	return get_disk()[0]
+def get_disk_free():
+	return get_disk()[2]
+def get_hostName():
+	return os.popen("hostname").read()
+
+
 #	m = re.search('AAA(.+?)ZZZ', text)
 #	if m:
 #		found = m.group(1)
