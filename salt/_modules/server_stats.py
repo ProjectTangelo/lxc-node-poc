@@ -40,7 +40,6 @@ def get_mem_free():
 	return get_mem()[1]	
 def get_mem_total():
 	return get_mem()[0]
-
 def get_disk():
         text = os.popen('df -m').read().strip().split("\n")[1].split(" ")
         text = filter(lambda x : len(x) > 0, text)[1:]
@@ -51,6 +50,12 @@ def get_disk_free():
 	return get_disk()[2]
 def get_hostName():
 	return os.popen("hostname").read()
+def dic_mem():
+	stuff = {'kind': 'memory', 'total': get_mem_total(), 'free': get_mem_free() }
+	return stuff
+def dic_diskSpace():
+        stuff = {'kind': 'disk space', 'total': get_disk_total(), 'free': get_disk_free() }
+        return stuff
 
 
 #	m = re.search('AAA(.+?)ZZZ', text)
