@@ -1,0 +1,19 @@
+    1  salt '*' cmd.run 'hostname'
+    2  sudo salt '*' cmd.run 'hostname'
+    3  salt
+    4  ls
+    5  free -m
+    6  sudo salt '*' cmd.run 'hostname'
+    7  sudo salt '*' sandbox.echo 
+    8  sudo salt '*' sandbox.echo 'what'
+    9  salt saltutil.sync_all
+   10  salt '*' saltutil.sync_all
+   11  sudoo salt '*' saltutil.sync_all
+   12  sudo salt '*' saltutil.sync_all
+   13  sudo salt '*' forest.tree 
+   14  sudo salt '*' saltutil.sync_all
+   15  sudo salt '*' forest.smokey Tyler
+   16  sudo salt '*' saltutil.sync_all
+   17  sudo salt '*' forest.free
+   18  history
+   19  history > /vagrant/salt_things.txt
