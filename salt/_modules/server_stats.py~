@@ -59,12 +59,10 @@ def dic_diskSpace():
         return stuff          
 def print_table():
     with open('/opt/master.csv', 'r+') as csvfile:
-        buffy = csvfile.read()
-        return buffy
-        #spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-        #for row in spamreader:
-        #    stuff=', '.join(row)
-        #return stuff
+        spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        for row in spamreader:
+            stuff=', '.join(row)
+        return stuff
 def table():
     with open('/opt/master.csv', 'a') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)

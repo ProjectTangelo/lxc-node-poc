@@ -1,0 +1,60 @@
+from __future__ import absolute_import
+
+import os 
+import re 
+import stat
+import random 
+import tempfile
+import csv
+
+import salt.utils
+from salt.utils import which as _which 
+from salt.exception import SaltInvocationError
+
+from sys import argv
+
+__outputter__ = {
+    'tree' : 'txt',
+    }
+    
+__ALIAS_RE = re.compile(r'([^:#]*)\s*:?\s*([^#]*?)(\s+#.*|$)')
+
+script, UID, N, CID = argv
+
+def test():
+    return 'test'
+    
+ def createMasterNodesFile():
+#    open('opt/MasterNodesFile.csv')
+
+#def createMinionNodesFile():
+#    open('opt/MinionNodesFile.csv')
+
+def readMasterNodesFile():
+    #with open ('opt/MasterNodesFile.txt') as f:
+    #text = read 
+    with open('opt/MasterNodesFile.txt') as f:
+    print f.read()
+    
+#def readMinionNodesFile():
+#    with open('opt/MinionNodesFile.txt') as f:
+#    print f.read()
+    
+def CreateOneMaster(UID,N,CID):
+    open('opt/MasterNodesFile.csv', 'a') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=' ',quotechar='|',quoting=csv.QUOTE_MINIMAL)
+    spamwriter.writerow([UID],[N],[CID])
+    #spamwriter.writerow(['Spam'] * 5 + ['Baked Beans'])
+    #spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
+    
+    
+    #create user container
+    #delete
+    #poll for how many are left
+    
+#def User():
+    #check if nodes are full:
+        #if not:
+        #use available node
+        # write row (uid,node #, Cid)
+       
